@@ -8,14 +8,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="500" minWidth="500" prefHeight="550.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DirectoryDisplayController">
+<AnchorPane id="AnchorPane" minHeight="750.0" minWidth="900.0" prefHeight="750.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DirectoryDisplayController">
    <children>
-      <ToolBar fx:id="topToolbar" prefHeight="50.0" prefWidth="700.0" style="-fx-background-color: #979ff2;">
+      <ToolBar fx:id="topToolbar" prefHeight="50.0" prefWidth="900.0" style="-fx-background-color: #979ff2;">
          <items>
             <Button mnemonicParsing="false" style="-fx-background-color: #979ff2;-fx-background-repeat: no-repeat;-fx-background-size: contain; -fx-background-image: url('icons/add_plus_new_user_green_page_file_up_text-512.png');" text="" />
             <Button mnemonicParsing="false" style="-fx-background-color: #979ff2;-fx-background-repeat: no-repeat;-fx-background-size: contain; -fx-background-image: url('icons/gallery-512.png');" text="" />
          </items></ToolBar>
-      <ToolBar fx:id="bottomToolbar" layoutY="491.0" prefHeight="59.0" prefWidth="700.0" style="-fx-background-color: #979ff2;" />
-      <HBox fx:id="HBoxDirectory" layoutY="50.0" prefHeight="440.0" prefWidth="700.0" />
+      <ToolBar fx:id="bottomToolbar" layoutY="691.0" prefHeight="59.0" prefWidth="900.0" style="-fx-background-color: #979ff2;" />
+      <HBox fx:id="HBoxDirectory" layoutY="73.0" prefHeight="598.0" prefWidth="700.0" />
    </children>
 </AnchorPane>

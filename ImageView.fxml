@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="500" minWidth="500" prefHeight="550.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ImageViewController">
+<AnchorPane id="AnchorPane" minHeight="750.0" minWidth="900.0" prefHeight="750.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ImageViewController">
    <children>
-      <ToolBar prefHeight="50.0" prefWidth="700.0" style="-fx-background-color: #979ff2;">
+      <ToolBar prefHeight="50.0" prefWidth="900.0" style="-fx-background-color: #979ff2;">
         <items>
-          <Button fx:id="openButton" mnemonicParsing="false" onAction="#fileChooser" style="-fx-background-color: transparent; -fx-background-repeat: no-repeat; -fx-background-size: contain; -fx-background-image: url('icons/folder-open-512.png');" text=""/>
+          <Button fx:id="openButton" mnemonicParsing="false" onAction="#fileChooser" style="-fx-background-color: transparent; -fx-background-repeat: no-repeat; -fx-background-size: contain; -fx-background-image: url('icons/folder-open-512.png');" text="" />
             <Button mnemonicParsing="false" onAction="#previousImage" prefHeight="23.0" prefWidth="27.0" style="-fx-background-color: #989898;" text="&lt;">
                <font>
                   <Font size="20.0" />
@@ -24,7 +28,7 @@
             <Button fx:id="saveButton" mnemonicParsing="false" style="-fx-background-color: #979ff2;-fx-background-repeat: no-repeat;-fx-background-size: contain; -fx-background-image: url('icons/save.png');" text="" />
         </items>
       </ToolBar>
-      <ToolBar layoutY="491.0" prefHeight="59.0" prefWidth="700.0" style="-fx-background-color: #979ff2;">
+      <ToolBar layoutY="691.0" prefHeight="59.0" prefWidth="900.0" style="-fx-background-color: #979ff2;">
         <items>
             <SplitMenuButton mnemonicParsing="false" popupSide="TOP" style="-fx-background-color: #979ff2;" text="Effects">
               <items>

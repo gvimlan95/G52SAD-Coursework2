@@ -8,6 +8,8 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.image.ImageView;
+import sun.plugin.javascript.navig.Anchor;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.ArrayList;
@@ -24,41 +26,44 @@ public class DirectoryDisplayController {
     @FXML
     private HBox HBoxDirectory;
 
+    private String directoryLocation = "/Users/VIMLANG/SAD Images/";
+
     public void initialize(){
-        getFilesList();
+        listFilesAndFilesSubDirectories(directoryLocation);
 
     }
 
-    public void getFilesList(){
+    public void listFilesAndFilesSubDirectories(String location){
         ListFilesUtil listFilesUtil = new ListFilesUtil();
-        final String directoryLinuxMac ="/Users/VIMLANG/SAD Images/";
-        File[] fileList=listFilesUtil.listFiles(directoryLinuxMac);
+        File[] fileList=listFilesUtil.listFiles(location);
         for (File file : fileList){
-            if (file.isFile()){
-                System.out.println("filename "+ file.getAbsolutePath());
+//            if (file.isFile()){
                 AnchorPane pane = new AnchorPane();
                 ImageView imgView = new ImageView();
 //                Label label = new Label(fileName.replace(".jpg",""));
                 Label label = new Label(file.getName());
                 Image img = new Image("file:"+file.getAbsolutePath());
-                System.out.println("Done");
 
                 imgView.setImage(img);
                 imgView.setFitHeight(100);
                 imgView.setFitWidth(100);
                 xCod +=10;
                 imgView.setX(xCod);
-                imgView.setY(10);
+                imgView.setY(yCod);
                 double x = imgView.getX();
                 label.setLayoutX(x);
+                System.out.println("x "+x);
                 double y = imgView.getY();
-                label.setLayoutY(y+100);
+                label.setLayoutY(imgView.getFitHeight());
+
                 pane.getChildren().add(imgView);
                 pane.getChildren().add(label);
 
                 HBoxDirectory.getChildren().add(pane);
 
-            }
+//            }
         }
     }
+
+
 }
