@@ -52,7 +52,6 @@ public class ImageViewController
 
     // Initialize method
     public void initialize(){
-      // Load the dog and cat images
         getFilesList();
         myImage.setImage(images.get(0));
     }
