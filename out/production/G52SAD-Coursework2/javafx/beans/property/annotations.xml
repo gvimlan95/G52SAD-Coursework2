@@ -1,0 +1,5 @@
+<root>
+  <item name='javafx.beans.property.SimpleDoubleProperty'>
+    <annotation name='java.lang.annotation.Deprecated'/>
+  </item>
+</root>

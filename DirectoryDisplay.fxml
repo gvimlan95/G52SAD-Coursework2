@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="500" minWidth="500" prefHeight="550.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DirectoryDisplayController">
+   <children>
+      <ToolBar prefHeight="50.0" prefWidth="700.0" style="-fx-background-color: #979ff2;" />
+      <ToolBar layoutY="491.0" prefHeight="59.0" prefWidth="700.0" style="-fx-background-color: #979ff2;" />
+   </children>
+</AnchorPane>

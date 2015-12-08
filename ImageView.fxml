@@ -1,24 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.collections.*?>
+<?import java.lang.String?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="216.0" prefWidth="246.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="ImageViewDemoController">
-  <children>
-    <ImageView fx:id="myImage" fitHeight="150.0" fitWidth="200.0" layoutX="24.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
-      <image>
-        <Image url="@Dog.jpg" />
-      </image>
-    </ImageView>
-    <RadioButton fx:id="dogRadioButton" layoutX="73.0" layoutY="184.0" mnemonicParsing="false" onAction="#dogRadioButtonListener" selected="true" text="Dog">
-      <toggleGroup>
-        <ToggleGroup fx:id="myToggleGroup" />
-      </toggleGroup>
-    </RadioButton>
-    <RadioButton fx:id="catRadioButton" layoutX="131.0" layoutY="184.0" mnemonicParsing="false" onAction="#catRadioButtonListener" text="Cat" toggleGroup="$myToggleGroup" />
-  </children>
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="500" minWidth="500" prefHeight="550.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ImageViewController">
+   <children>
+      <ToolBar prefHeight="50.0" prefWidth="700.0" style="-fx-background-color: #979ff2;">
+        <items>
+          <Button fx:id="openButton" mnemonicParsing="false" onAction="#fileChooser" style="-fx-background-color: #979ff2; -fx-background-image: image;" text="Open" />
+            <Button mnemonicParsing="false" onAction="#previousImage" prefHeight="23.0" prefWidth="27.0" style="-fx-background-color: #989898;" text="&lt;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#nextImage" prefHeight="28.0" prefWidth="30.0" style="-fx-background-color: #989898;" text="&gt;">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="saveButton" mnemonicParsing="false" style="-fx-background-color: #979ff2; -fx-background-image: image;" text="Save" />
+        </items>
+      </ToolBar>
+      <ToolBar layoutY="491.0" prefHeight="59.0" prefWidth="700.0" style="-fx-background-color: #979ff2;">
+        <items>
+            <SplitMenuButton mnemonicParsing="false" popupSide="TOP" style="-fx-background-color: #979ff2;" text="Effects">
+              <items>
+                <MenuItem fx:id="brightnessMenu" mnemonicParsing="false" onAction="#setBrightnessSlider" text="Brightness" />
+                  <MenuItem fx:id="contrastMenu" mnemonicParsing="false" onAction="#setContrastsSlider" text="Contrast" />
+                  <MenuItem fx:id="saturationMenu" mnemonicParsing="false" onAction="#setSaturationSlider" text="Saturation" />
+                  <MenuItem fx:id="hueMenu" mnemonicParsing="false" onAction="#setHueSlider" text="Hue" />
+              </items>
+            </SplitMenuButton>
+            <Text fx:id="effectName" strokeType="OUTSIDE" strokeWidth="0.0" text="" />
+            <Slider fx:id="effectSlider" max="1.0" min="0.0" onDragDetected="#getSliderValue" visible="false" />
+            <Button mnemonicParsing="false" onAction="#rotateLeft" style="-fx-background-color: #979ff2; -fx-background-image: image;" text="Rotate Left" />
+            <Button mnemonicParsing="false" onAction="#rotateRight" style="-fx-background-color: #979ff2; -fx-background-image: image;" text="Rotate Right" />
+            <Button mnemonicParsing="false" style="-fx-background-color: #979ff2; -fx-background-image: image;" text="Full Screen" />
+            <Slider />
+        </items>
+      </ToolBar>
+              <ImageView fx:id="myImage" fitHeight="400.0" fitWidth="500.0" layoutX="106.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
 </AnchorPane>
