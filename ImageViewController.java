@@ -36,7 +36,6 @@ public class ImageViewController
     @FXML
     private ImageView myImage;
     private Image newImage;
-    private Text effectname;
 
     // Private fields for the dog and cat images
     private List<Image> images = new ArrayList<>();
@@ -76,13 +75,6 @@ public class ImageViewController
     }
 
 
-    public void changed() {
-//        setBrightness(slider1.getValue());
-//        slider1.setVisible(false);
-//        System.out.println("Slider value "+slider1.getValue());
-
-    }
-
     public void resetImage() {
         effectSlider.setValue(0.0);
         ColorAdjust colorAdjust = new ColorAdjust();
@@ -100,19 +92,16 @@ public class ImageViewController
     }
 
     public void setSaturation(double value){
-        //ColorAdjust saturationAdjust = new ColorAdjust();
         effectAdjust.setSaturation(value);
         myImage.setEffect(effectAdjust);
     }
 
     public void setContrast(double value){
-//        ColorAdjust contrastAdjust = new ColorAdjust();
         effectAdjust.setContrast(value);
         myImage.setEffect(effectAdjust);
     }
 
     public void setHue(double value){
-        //ColorAdjust hueAdjust = new ColorAdjust();
         effectAdjust.setContrast(value);
         myImage.setEffect(effectAdjust);
     }
