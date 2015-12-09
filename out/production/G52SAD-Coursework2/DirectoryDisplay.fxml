@@ -8,19 +8,22 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" minHeight="750.0" minWidth="900.0" prefHeight="750.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DirectoryDisplayController">
+<AnchorPane fx:id="root" id="AnchorPane" minHeight="750.0" minWidth="900.0" prefHeight="750.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DirectoryDisplayController">
    <children>
-      <ToolBar fx:id="topToolbar" prefHeight="50.0" prefWidth="900.0" style="-fx-background-color: #979ff2;">
-         <items>
-            <Button fx:id="backButton" mnemonicParsing="false" text="Back" onAction="#goToPreviousDirectory"/>
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #979ff2;-fx-background-repeat: no-repeat;-fx-background-size: contain; -fx-background-image: url('icons/add_plus_new_user_green_page_file_up_text-512.png');" text="" />
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #979ff2;-fx-background-repeat: no-repeat;-fx-background-size: contain; -fx-background-image: url('icons/gallery-512.png');" text="" />
-         </items></ToolBar>
-      <ToolBar fx:id="bottomToolbar" layoutY="691.0" prefHeight="59.0" prefWidth="900.0" style="-fx-background-color: #979ff2;" />
-      <ScrollPane layoutY="48.0" prefHeight="643.0" prefWidth="900.0">
-         <content>
-            <TilePane fx:id="tilePaneItems" prefHeight="642.0" prefWidth="898.0" />
-         </content>
-      </ScrollPane>
+       <FlowPane fx:id="flowPane" alignment="CENTER">
+           <ScrollPane fx:id="scrollPane">
+               <content>
+                   <TilePane fx:id="tilePane"/>
+               </content>
+           </ScrollPane>
+       </FlowPane>
+       <ToolBar fx:id="topToolbar" prefHeight="60.0" AnchorPane.topAnchor="0" style="-fx-background-color: #979ff2;">
+           <items>
+               <Button fx:id="backButton" mnemonicParsing="false" text="Back" onAction="#goToPreviousDirectory"/>
+               <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #979ff2;-fx-background-repeat: no-repeat;-fx-background-size: contain; -fx-background-image: url('icons/add_plus_new_user_green_page_file_up_text-512.png');" text="" />
+               <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #979ff2;-fx-background-repeat: no-repeat;-fx-background-size: contain; -fx-background-image: url('icons/gallery-512.png');" text="" />
+           </items>
+       </ToolBar>
+       <ToolBar fx:id="bottomToolbar"  prefHeight="60.0" AnchorPane.bottomAnchor="0" style="-fx-background-color: #979ff2;" />
    </children>
 </AnchorPane>

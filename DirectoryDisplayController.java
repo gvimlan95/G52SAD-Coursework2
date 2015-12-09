@@ -2,12 +2,14 @@ import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.ToolBar;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.TilePane;
 import javafx.scene.image.ImageView;
-
 import java.io.File;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
@@ -21,22 +23,54 @@ public class DirectoryDisplayController {
     private Deque<String> pastDirectory = new ArrayDeque<String>();
 
     @FXML
-    private TilePane tilePaneItems;
+    private AnchorPane root;
 
     @FXML
     private Button backButton;
 
+    @FXML
+    private ToolBar topToolbar;
+
+    @FXML
+    private ToolBar bottomToolbar;
+
+    @FXML
+    private ScrollPane scrollPane;
+
+    @FXML
+    private TilePane tilePane;
+
+    @FXML
+    private FlowPane flowPane;
+
     private String directoryLocation = "/Users/VIMLANG/SAD Images/";
 
     public void initialize(){
+        bindValues();
         listFilesAndFilesSubDirectories(directoryLocation);
+    }
 
+    public void bindValues(){
+        topToolbar.prefWidthProperty().bind(root.widthProperty());
+//        topToolbar.prefHeightProperty().bind(root.heightProperty().multiply(0.1));
+
+        bottomToolbar.prefWidthProperty().bind(root.widthProperty());
+//        bottomToolbar.prefHeightProperty().bind(root.heightProperty().multiply(0.1));
+
+        flowPane.prefWidthProperty().bind(root.widthProperty());
+        flowPane.prefHeightProperty().bind(root.heightProperty());
+
+        scrollPane.prefWidthProperty().bind(flowPane.widthProperty());
+        scrollPane.prefHeightProperty().bind(flowPane.heightProperty().subtract(120));
+
+        tilePane.prefWidthProperty().bind(scrollPane.widthProperty());
+        tilePane.prefHeightProperty().bind(scrollPane.heightProperty());
     }
 
     public void listFilesAndFilesSubDirectories(String location){
 
 
-        tilePaneItems.getChildren().clear();
+        tilePane.getChildren().clear();
         ListFilesUtil listFilesUtil = new ListFilesUtil();
         File[] fileList=listFilesUtil.listFiles(location);
         for (File file : fileList){
@@ -65,14 +99,13 @@ public class DirectoryDisplayController {
             pane.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
 
                 if(event.getClickCount() == 2) {
-                    System.out.println(file.getAbsolutePath());
                     listFilesAndFilesSubDirectories(file.getAbsolutePath());
                     pastDirectory.push(location);
                 }
 
             });
 
-            tilePaneItems.getChildren().add(pane);
+            tilePane.getChildren().add(pane);
         }
     }
 

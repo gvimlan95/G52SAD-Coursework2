@@ -2,10 +2,7 @@ import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.SnapshotParameters;
-import javafx.scene.control.Button;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.control.Slider;
-import javafx.scene.control.ToolBar;
+import javafx.scene.control.*;
 import javafx.scene.effect.ColorAdjust;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -21,6 +18,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class ImageViewController 
 {
@@ -41,6 +39,7 @@ public class ImageViewController
 
     // Private fields for the dog and cat images
     private List<Image> images = new ArrayList<>();
+//    private List<String> fileNameList = new ArrayList<>();
     private int index = 0;
 
     @FXML
@@ -76,19 +75,13 @@ public class ImageViewController
 
     public void bindValues(){
         topToolbar.prefWidthProperty().bind(root.widthProperty());
-//        topToolbar.prefHeightProperty().bind(root.heightProperty().multiply(0.1));
-
         bottomToolbar.prefWidthProperty().bind(root.widthProperty());
-//        bottomToolbar.prefHeightProperty().bind(root.heightProperty().multiply(0.1));
 
         flowPane.prefWidthProperty().bind(root.widthProperty());
         flowPane.prefHeightProperty().bind(root.heightProperty());
 
         scrollPane.prefWidthProperty().bind(flowPane.prefWidthProperty().subtract(100));
         scrollPane.prefHeightProperty().bind(flowPane.prefHeightProperty().subtract(150));
-
-//        myImage.fitWidthProperty().bind(scrollPane.prefWidthProperty());
-//        myImage.fitHeightProperty().bind(scrollPane.prefHeightProperty());
     }
 
     public void getFilesList(){
@@ -98,14 +91,13 @@ public class ImageViewController
         File[] fileList=listFilesUtil.listFiles(directoryLinuxMac);
         for (File file : fileList){
             if (file.isFile()){
-                String fileName = "/Users/VIMLANG/SAD Images/"+file.getName();
+//                fileNameList.add(file.getName());
                 Image newImage1 = new Image("file:"+file.getPath());
                 images.add(newImage1);
             }
         }
         images.remove(0);
         setImage(images.get(1));
-
     }
 
     public void setImage(Image image){
@@ -127,9 +119,7 @@ public class ImageViewController
         File file = fileChooser.showOpenDialog(null);
 
         if(file!=null)
-
-            myImage.setRotate(0);
-            System.out.println("File path "+file.getPath());
+//            myImage.setRotate(0);
             newImage = new Image("file:"+file.getPath());
             setImage(newImage);
     }
@@ -163,13 +153,41 @@ public class ImageViewController
     }
 
     public void saveToFile(Image image) {
-        File outputFile = new File("/Users/VIMLANG/SAD Images/image1111.png");
-        WritableImage snapshot = myImage.snapshot(new SnapshotParameters(), null);
-        BufferedImage bImage = SwingFXUtils.fromFXImage(snapshot, null);
-        try {
-            ImageIO.write(bImage, "png", outputFile);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+//        TextInputDialog dialog = new TextInputDialog("");
+//        dialog.setTitle("Enter new image name");
+//        dialog.setHeaderText("");
+//        dialog.setContentText("Please enter your image name:");
+//        Optional<String> result = dialog.showAndWait();
+//
+//        if (result.isPresent()){
+//            File outputFile = new File("/Users/VIMLANG/SAD Images/"+result.get()+".png");
+//            WritableImage snapshot = myImage.snapshot(new SnapshotParameters(), null);
+//            BufferedImage bImage = SwingFXUtils.fromFXImage(snapshot, null);
+//            try {
+//                ImageIO.write(bImage, "png", outputFile);
+//            } catch (IOException e) {
+//                throw new RuntimeException(e);
+//            }
+//        }
+
+        FileChooser fileChooser = new FileChooser();
+
+        FileChooser.ExtensionFilter extFilterJPG = new FileChooser.ExtensionFilter("JPG files (*.jpg)", "*.JPG");
+        FileChooser.ExtensionFilter extFilterPNG = new FileChooser.ExtensionFilter("PNG files (*.png)", "*.PNG");
+        fileChooser.getExtensionFilters().addAll(extFilterJPG, extFilterPNG);
+
+        fileChooser.setTitle("Select File");
+
+        File file = fileChooser.showSaveDialog(null);
+
+        if(file != null){
+            WritableImage snapshot = myImage.snapshot(new SnapshotParameters(), null);
+            BufferedImage bImage = SwingFXUtils.fromFXImage(snapshot, null);
+            try {
+                ImageIO.write(bImage, "png", file);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 
