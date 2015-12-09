@@ -16,6 +16,10 @@
             <Button mnemonicParsing="false" style="-fx-background-color: #979ff2;-fx-background-repeat: no-repeat;-fx-background-size: contain; -fx-background-image: url('icons/gallery-512.png');" text="" />
          </items></ToolBar>
       <ToolBar fx:id="bottomToolbar" layoutY="691.0" prefHeight="59.0" prefWidth="900.0" style="-fx-background-color: #979ff2;" />
-      <HBox fx:id="HBoxDirectory" layoutY="73.0" prefHeight="598.0" prefWidth="700.0" />
+      <ScrollPane layoutY="48.0" prefHeight="643.0" prefWidth="900.0">
+         <content>
+            <TilePane fx:id="tilePaneItems" prefHeight="642.0" prefWidth="898.0" />
+         </content>
+      </ScrollPane>
    </children>
 </AnchorPane>

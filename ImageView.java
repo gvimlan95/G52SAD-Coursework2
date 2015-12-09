@@ -2,6 +2,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 
 public class ImageView extends Application
@@ -19,6 +20,8 @@ public class ImageView extends Application
 
       // Display our window, using the scene graph.
       stage.setTitle("Vimlan.G Awesome Photo Viewer");
+//      stage.setWidth(Screen.getPrimary().getVisualBounds().getWidth());
+//      stage.setHeight(Screen.getPrimary().getVisualBounds().getHeight());
       stage.setScene(scene);
       stage.show();
    }
