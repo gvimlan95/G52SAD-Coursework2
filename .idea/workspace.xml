@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9884ee7d-f5ec-44af-a51c-2c14dbc24414" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/DirectoryDisplayController.class" afterPath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/DirectoryDisplayController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/ImageView.class" afterPath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/ImageView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DirectoryDisplay.fxml" afterPath="$PROJECT_DIR$/DirectoryDisplay.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DirectoryDisplayController.java" afterPath="$PROJECT_DIR$/DirectoryDisplayController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ImageView.java" afterPath="$PROJECT_DIR$/ImageView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/DirectoryDisplay.fxml" afterPath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/DirectoryDisplay.fxml" />
     </list>
     <ignored path="G52SAD-Coursework2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,10 +26,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ImageView.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ImageView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ImageView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34253246">
+            <state vertical-scroll-proportion="0.0">
               <caret line="15" column="55" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -49,20 +44,21 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.245283">
-              <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+            <state vertical-scroll-proportion="-3.962264">
+              <caret line="14" column="88" selection-start-line="14" selection-start-column="88" selection-end-line="14" selection-end-column="88" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DirectoryDisplayController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DirectoryDisplayController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DirectoryDisplayController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="74" column="40" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
+            <state vertical-scroll-proportion="-0.071428575">
+              <caret line="41" column="52" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#578#586#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -677,12 +673,12 @@
       <workItem from="1448969482120" duration="82000" />
       <workItem from="1449069467303" duration="16757000" />
       <workItem from="1449197573260" duration="29425000" />
-      <workItem from="1449545087316" duration="22195000" />
+      <workItem from="1449545087316" duration="25326000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68459000" />
+    <option name="totallyTimeSpent" value="71590000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -757,6 +753,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#578#586#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -939,33 +936,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DirectoryDisplay.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.245283">
-          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DirectoryDisplayController.java">
+    <entry file="file://$PROJECT_DIR$/ImageView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="74" column="40" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
+          <caret line="15" column="55" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ImageView.java">
+    <entry file="file://$PROJECT_DIR$/DirectoryDisplay.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34253246">
-          <caret line="15" column="55" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="55" />
+        <state vertical-scroll-proportion="-3.962264">
+          <caret line="14" column="88" selection-start-line="14" selection-start-column="88" selection-end-line="14" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DirectoryDisplayController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.071428575">
+          <caret line="41" column="52" selection-start-line="41" selection-start-column="52" selection-end-line="41" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#578#586#0" expanded="true" />
           </folding>
         </state>
       </provider>

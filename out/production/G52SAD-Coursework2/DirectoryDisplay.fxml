@@ -12,8 +12,9 @@
    <children>
       <ToolBar fx:id="topToolbar" prefHeight="50.0" prefWidth="900.0" style="-fx-background-color: #979ff2;">
          <items>
-            <Button mnemonicParsing="false" style="-fx-background-color: #979ff2;-fx-background-repeat: no-repeat;-fx-background-size: contain; -fx-background-image: url('icons/add_plus_new_user_green_page_file_up_text-512.png');" text="" />
-            <Button mnemonicParsing="false" style="-fx-background-color: #979ff2;-fx-background-repeat: no-repeat;-fx-background-size: contain; -fx-background-image: url('icons/gallery-512.png');" text="" />
+            <Button mnemonicParsing="false" text="Back" onAction="#goToPreviousDirectory"/>
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #979ff2;-fx-background-repeat: no-repeat;-fx-background-size: contain; -fx-background-image: url('icons/add_plus_new_user_green_page_file_up_text-512.png');" text="" />
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #979ff2;-fx-background-repeat: no-repeat;-fx-background-size: contain; -fx-background-image: url('icons/gallery-512.png');" text="" />
          </items></ToolBar>
       <ToolBar fx:id="bottomToolbar" layoutY="691.0" prefHeight="59.0" prefWidth="900.0" style="-fx-background-color: #979ff2;" />
       <ScrollPane layoutY="48.0" prefHeight="643.0" prefWidth="900.0">
