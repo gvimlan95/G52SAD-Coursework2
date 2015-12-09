@@ -66,10 +66,12 @@ public class ImageViewController
     @FXML
     private ScrollPane scrollPane;
 
+    private String fileDirectory = "/Users/VIMLANG/SAD Images/";
+
     // Initialize method
     public void initialize(){
         getFilesList();
-        setImage(images.get(0));
+//        setImage(images.get(0));
         bindValues();
     }
 
@@ -87,11 +89,9 @@ public class ImageViewController
     public void getFilesList(){
         images.removeAll(images);
         ListFilesUtil listFilesUtil = new ListFilesUtil();
-        final String directoryLinuxMac ="/Users/VIMLANG/SAD Images/";
-        File[] fileList=listFilesUtil.listFiles(directoryLinuxMac);
+        File[] fileList=listFilesUtil.listFiles(fileDirectory);
         for (File file : fileList){
             if (file.isFile()){
-//                fileNameList.add(file.getName());
                 Image newImage1 = new Image("file:"+file.getPath());
                 images.add(newImage1);
             }
@@ -153,23 +153,6 @@ public class ImageViewController
     }
 
     public void saveToFile(Image image) {
-//        TextInputDialog dialog = new TextInputDialog("");
-//        dialog.setTitle("Enter new image name");
-//        dialog.setHeaderText("");
-//        dialog.setContentText("Please enter your image name:");
-//        Optional<String> result = dialog.showAndWait();
-//
-//        if (result.isPresent()){
-//            File outputFile = new File("/Users/VIMLANG/SAD Images/"+result.get()+".png");
-//            WritableImage snapshot = myImage.snapshot(new SnapshotParameters(), null);
-//            BufferedImage bImage = SwingFXUtils.fromFXImage(snapshot, null);
-//            try {
-//                ImageIO.write(bImage, "png", outputFile);
-//            } catch (IOException e) {
-//                throw new RuntimeException(e);
-//            }
-//        }
-
         FileChooser fileChooser = new FileChooser();
 
         FileChooser.ExtensionFilter extFilterJPG = new FileChooser.ExtensionFilter("JPG files (*.jpg)", "*.JPG");
