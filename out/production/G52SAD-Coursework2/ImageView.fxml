@@ -42,10 +42,14 @@
             <Slider fx:id="effectSlider" max="1.0" min="0.0" onDragDetected="#getSliderValue" visible="false" />
             <Button mnemonicParsing="false" onAction="#rotateLeft" style="-fx-background-color: #979ff2; -fx-background-image: image;" text="Rotate Left" />
             <Button mnemonicParsing="false" onAction="#rotateRight" style="-fx-background-color: #979ff2; -fx-background-image: image;" text="Rotate Right" />
-            <Button mnemonicParsing="false" style="-fx-background-color: #979ff2; -fx-background-image: image;" text="Full Screen" />
-            <Slider />
+            <Button mnemonicParsing="false" style="-fx-background-color: #979ff2; -fx-background-image: image;" text="Full Screen"/>
+            <Slider fx:id="zoomSlider" min="1.0" max="5.0" onDragDetected="#zoomImage"/>
         </items>
       </ToolBar>
-              <ImageView fx:id="myImage" fitHeight="400.0" fitWidth="500.0" layoutX="106.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true" />
+      <ScrollPane layoutX="71.0" layoutY="107.0" prefHeight="536.0" prefWidth="758.0">
+         <content>
+                    <ImageView fx:id="myImage" fitHeight="534.0" fitWidth="756.0" pickOnBounds="true" preserveRatio="true" />
+         </content>
+      </ScrollPane>
    </children>
 </AnchorPane>

@@ -1,5 +1,6 @@
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
@@ -21,6 +22,9 @@ public class DirectoryDisplayController {
 
     @FXML
     private TilePane tilePaneItems;
+
+    @FXML
+    private Button backButton;
 
     private String directoryLocation = "/Users/VIMLANG/SAD Images/";
 
@@ -59,9 +63,13 @@ public class DirectoryDisplayController {
             pane.setPadding(new Insets(20.0));
 
             pane.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
-                System.out.println(file.getAbsolutePath());
-                listFilesAndFilesSubDirectories(file.getAbsolutePath());
-                pastDirectory.push(location);
+
+                if(event.getClickCount() == 2) {
+                    System.out.println(file.getAbsolutePath());
+                    listFilesAndFilesSubDirectories(file.getAbsolutePath());
+                    pastDirectory.push(location);
+                }
+
             });
 
             tilePaneItems.getChildren().add(pane);
@@ -72,6 +80,8 @@ public class DirectoryDisplayController {
         if(!pastDirectory.isEmpty()) {
             String dir = pastDirectory.pop();
             listFilesAndFilesSubDirectories(dir);
+        }else{
+            backButton.setVisible(false);
         }
     }
 

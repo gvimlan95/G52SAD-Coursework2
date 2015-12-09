@@ -2,7 +2,6 @@ import javafx.beans.property.DoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
@@ -10,11 +9,7 @@ import javafx.scene.control.Slider;
 import javafx.scene.effect.ColorAdjust;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.ScrollEvent;
-import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
-import javafx.stage.Stage;
-
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -45,6 +40,9 @@ public class ImageViewController
     private Slider effectSlider;
 
     @FXML
+    private Slider zoomSlider;
+
+    @FXML
     private Button saveButton;
 
     @FXML
@@ -72,7 +70,6 @@ public class ImageViewController
         myImage.setImage(images.get(1));
 
     }
-
 
     public void resetImage() {
         effectSlider.setValue(0.0);
@@ -163,19 +160,6 @@ public class ImageViewController
         }
     }
 
-    public void invalidated() {
-        myImage.setFitWidth(zoomProperty.get() * 4);
-        myImage.setFitHeight(zoomProperty.get() * 3);
-    }
-
-    public void handle(ScrollEvent event) {
-        if (event.getDeltaY() > 0) {
-            zoomProperty.set(zoomProperty.get() * 1.1);
-        } else if (event.getDeltaY() < 0) {
-            zoomProperty.set(zoomProperty.get() / 1.1);
-        }
-    }
-
     public void enableEffectSlider(){
         effectSlider.setVisible(true);
         effectSlider.setValue(0.0);
@@ -183,21 +167,23 @@ public class ImageViewController
 
     public void getSliderValue(){
         double value = effectSlider.getValue();
-        System.out.println("value "+value);
-        switch(effectId){
-            case 0 :
-                setBrightness(value);
-                break;
-            case 1 :
-                setContrast(value);
-                break;
-            case 2 :
-                setSaturation(value);
-                break;
-            case 3 :
-                setHue(value);
-                break;
-        }
+
+        effectSlider.valueProperty().addListener((observable, oldValue, newValue) -> {
+            switch(effectId){
+                case 0 :
+                    setBrightness(newValue.doubleValue());
+                    break;
+                case 1 :
+                    setContrast(newValue.doubleValue());
+                    break;
+                case 2 :
+                    setSaturation(newValue.doubleValue());
+                    break;
+                case 3 :
+                    setHue(newValue.doubleValue());
+                    break;
+            }
+        });
     }
 
     public void setBrightnessSlider(){
@@ -218,5 +204,40 @@ public class ImageViewController
     public void setHueSlider(){
         effectId=3;
         enableEffectSlider();
+    }
+
+    public void zoomImage(){
+
+        double imageWidth = myImage.getFitWidth();
+        double imageHeight = myImage.getFitHeight();
+//        zoomProperty.addListener(new InvalidationListener() {
+//            @Override
+//            public void invalidated(javafx.beans.Observable observable) {
+//                myImage.setFitWidth(zoomProperty.get() * 4);
+//                myImage.setFitHeight(zoomProperty.get() * 3);
+//            }
+//        });
+//
+//        imageScrollPane.addEventFilter(ScrollEvent.ANY, new EventHandler<ScrollEvent>() {
+//            @Override
+//            public void handle(ScrollEvent event) {
+//                if (event.getDeltaY() > 0) {
+//                    zoomProperty.set(zoomProperty.get() * 1.1);
+//                } else if (event.getDeltaY() < 0) {
+//                    zoomProperty.set(zoomProperty.get() / 1.1);
+//                }
+//            }
+//        });
+//
+//        myImage.preserveRatioProperty().set(true);
+//        imageScrollPane.setContent(myImage);
+
+        zoomSlider.valueProperty().addListener((observable, oldValue, newValue) -> {
+            myImage.setFitWidth(imageWidth*newValue.doubleValue());
+            myImage.setFitHeight(imageHeight*newValue.doubleValue());
+            System.out.println("new value "+newValue);
+        });
+
+
     }
 }
