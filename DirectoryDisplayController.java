@@ -49,7 +49,7 @@ public class DirectoryDisplayController {
             if (file.isFile()){
                  img = new Image("file:"+file.getAbsolutePath());
             }else{
-                img = new Image("file:/Users/VIMLANG/G52SAD-Coursework2/icons/folder-open-512.png");
+                img = new Image("file:/Users/VIMLANG/G52SAD-Coursework2/icons/black-white-metro-folder-icon.png");
             }
 
             imgView.setImage(img);
@@ -80,8 +80,6 @@ public class DirectoryDisplayController {
         if(!pastDirectory.isEmpty()) {
             String dir = pastDirectory.pop();
             listFilesAndFilesSubDirectories(dir);
-        }else{
-            backButton.setVisible(false);
         }
     }
 

@@ -1,15 +1,20 @@
-import javafx.beans.property.DoubleProperty;
-import javafx.beans.property.SimpleDoubleProperty;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.SnapshotParameters;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.Slider;
+import javafx.scene.control.ToolBar;
 import javafx.scene.effect.ColorAdjust;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.image.WritableImage;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -19,11 +24,10 @@ import java.util.List;
 
 public class ImageViewController 
 {
-
-    final DoubleProperty zoomProperty = new SimpleDoubleProperty(200);
-
     private int xRotate=0;
     private int effectId = -1;
+    private double imageWidth;
+    private double imageHeight;
 
     ColorAdjust effectAdjust = new ColorAdjust();
 
@@ -31,6 +35,9 @@ public class ImageViewController
     @FXML
     private ImageView myImage;
     private Image newImage;
+
+    @FXML
+    private AnchorPane root;
 
     // Private fields for the dog and cat images
     private List<Image> images = new ArrayList<>();
@@ -48,10 +55,40 @@ public class ImageViewController
     @FXML
     private ScrollPane imageScrollPane;
 
+    @FXML
+    private ToolBar topToolbar;
+
+    @FXML
+    private ToolBar bottomToolbar;
+
+    @FXML
+    private FlowPane flowPane;
+
+    @FXML
+    private ScrollPane scrollPane;
+
     // Initialize method
     public void initialize(){
         getFilesList();
-        myImage.setImage(images.get(0));
+        setImage(images.get(0));
+        bindValues();
+    }
+
+    public void bindValues(){
+        topToolbar.prefWidthProperty().bind(root.widthProperty());
+//        topToolbar.prefHeightProperty().bind(root.heightProperty().multiply(0.1));
+
+        bottomToolbar.prefWidthProperty().bind(root.widthProperty());
+//        bottomToolbar.prefHeightProperty().bind(root.heightProperty().multiply(0.1));
+
+        flowPane.prefWidthProperty().bind(root.widthProperty());
+        flowPane.prefHeightProperty().bind(root.heightProperty());
+
+        scrollPane.prefWidthProperty().bind(flowPane.prefWidthProperty().subtract(100));
+        scrollPane.prefHeightProperty().bind(flowPane.prefHeightProperty().subtract(150));
+
+//        myImage.fitWidthProperty().bind(scrollPane.prefWidthProperty());
+//        myImage.fitHeightProperty().bind(scrollPane.prefHeightProperty());
     }
 
     public void getFilesList(){
@@ -67,39 +104,14 @@ public class ImageViewController
             }
         }
         images.remove(0);
-        myImage.setImage(images.get(1));
+        setImage(images.get(1));
 
     }
 
-    public void resetImage() {
-        effectSlider.setValue(0.0);
-        ColorAdjust colorAdjust = new ColorAdjust();
-        colorAdjust.setBrightness(0);
-        colorAdjust.setSaturation(0);
-        colorAdjust.setContrast(0);
-        colorAdjust.setHue(0);
-        myImage.setEffect(colorAdjust);
-    }
-
-
-    public void setBrightness(double value){
-        effectAdjust.setBrightness(value);
-        myImage.setEffect(effectAdjust);
-    }
-
-    public void setSaturation(double value){
-        effectAdjust.setSaturation(value);
-        myImage.setEffect(effectAdjust);
-    }
-
-    public void setContrast(double value){
-        effectAdjust.setContrast(value);
-        myImage.setEffect(effectAdjust);
-    }
-
-    public void setHue(double value){
-        effectAdjust.setContrast(value);
-        myImage.setEffect(effectAdjust);
+    public void setImage(Image image){
+        myImage.setImage(image);
+        imageWidth = myImage.getFitWidth();
+        imageHeight = myImage.getFitHeight();
     }
 
     public void fileChooser(ActionEvent event) {
@@ -119,7 +131,7 @@ public class ImageViewController
             myImage.setRotate(0);
             System.out.println("File path "+file.getPath());
             newImage = new Image("file:"+file.getPath());
-            myImage.setImage(newImage);
+            setImage(newImage);
     }
 
     public void rotateLeft(){
@@ -151,13 +163,19 @@ public class ImageViewController
     }
 
     public void saveToFile(Image image) {
-        File outputFile = new File("C:/JavaFX/");
-        BufferedImage bImage = SwingFXUtils.fromFXImage(image, null);
+        File outputFile = new File("/Users/VIMLANG/SAD Images/image1111.png");
+        WritableImage snapshot = myImage.snapshot(new SnapshotParameters(), null);
+        BufferedImage bImage = SwingFXUtils.fromFXImage(snapshot, null);
         try {
             ImageIO.write(bImage, "png", outputFile);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void saveHandler(){
+        Image image = myImage.getImage();
+        saveToFile(image);
     }
 
     public void enableEffectSlider(){
@@ -206,38 +224,52 @@ public class ImageViewController
         enableEffectSlider();
     }
 
-    public void zoomImage(){
+    public void resetImage() {
+        effectSlider.setValue(0.0);
+        ColorAdjust colorAdjust = new ColorAdjust();
+        colorAdjust.setBrightness(0);
+        colorAdjust.setSaturation(0);
+        colorAdjust.setContrast(0);
+        colorAdjust.setHue(0);
+        myImage.setEffect(colorAdjust);
+    }
 
-        double imageWidth = myImage.getFitWidth();
-        double imageHeight = myImage.getFitHeight();
-//        zoomProperty.addListener(new InvalidationListener() {
-//            @Override
-//            public void invalidated(javafx.beans.Observable observable) {
-//                myImage.setFitWidth(zoomProperty.get() * 4);
-//                myImage.setFitHeight(zoomProperty.get() * 3);
-//            }
-//        });
-//
-//        imageScrollPane.addEventFilter(ScrollEvent.ANY, new EventHandler<ScrollEvent>() {
-//            @Override
-//            public void handle(ScrollEvent event) {
-//                if (event.getDeltaY() > 0) {
-//                    zoomProperty.set(zoomProperty.get() * 1.1);
-//                } else if (event.getDeltaY() < 0) {
-//                    zoomProperty.set(zoomProperty.get() / 1.1);
-//                }
-//            }
-//        });
-//
-//        myImage.preserveRatioProperty().set(true);
-//        imageScrollPane.setContent(myImage);
+    public void setBrightness(double value){
+        effectAdjust.setBrightness(value);
+        myImage.setEffect(effectAdjust);
+    }
+
+    public void setSaturation(double value){
+        effectAdjust.setSaturation(value);
+        myImage.setEffect(effectAdjust);
+    }
+
+    public void setContrast(double value){
+        effectAdjust.setContrast(value);
+        myImage.setEffect(effectAdjust);
+    }
+
+    public void setHue(double value){
+        effectAdjust.setContrast(value);
+        myImage.setEffect(effectAdjust);
+    }
+
+    public void zoomImage(){
 
         zoomSlider.valueProperty().addListener((observable, oldValue, newValue) -> {
             myImage.setFitWidth(imageWidth*newValue.doubleValue());
             myImage.setFitHeight(imageHeight*newValue.doubleValue());
-            System.out.println("new value "+newValue);
         });
 
+    }
 
+    public void fullscreenHandler(){
+        Stage stage = (Stage)root.getScene().getWindow();
+
+        if(stage.isFullScreen()){
+            stage.setFullScreen(false);
+        }else{
+            stage.setFullScreen(true);
+        }
     }
 }
