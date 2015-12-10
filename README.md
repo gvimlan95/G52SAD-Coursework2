@@ -3,19 +3,20 @@ G52SAD Coursework2
 
 
 
-Project Name - GV PhotoViewer
+GV PhotoViewer
 
-Introduction - A small program made to browse and organise images in a folder. The program also provides basic image enhancement features. 
+A small program made to browse and organise images in a folder. The program also provides basic image enhancement features. 
 
 Java Classes - 	DirectoryDisplayController.java,
 				SceneManager.java,
 				ListFilesUtil.java,
 				ImageViewApplication.java,
 				ImageViewController.java
+
 FXML 		 -	ImageView.fxml,
 				DirectoryDisplay.fxml
 
-ImageViewApplication - the main java class to intialize and start the program
+ImageViewApplication.java - the main java class to intialize and start the program
 
 Controller files and FXML files corresponds with each other to provide the visual design and all the methods
 
@@ -27,5 +28,6 @@ ListFilesUtil.java - returns the list of all the subdirectory and files in a dir
 SceneManager.java  - works as a singleton classes to join all the controller with their fxml to make all the methods accessible by different classes
 
 
+The MIT License (MIT)
 
-
+Copyright (c) 2015 Vimlan.G
