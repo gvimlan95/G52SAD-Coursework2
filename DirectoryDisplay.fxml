@@ -21,12 +21,18 @@
             <items>
                 <Button fx:id="backButton" onAction="#goToPreviousDirectory" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #979ff2;-fx-background-repeat: no-repeat;-fx-background-size: contain; -fx-background-image: url('icons/back.png');" />
                 <Button mnemonicParsing="false" onAction="#createNewFolder" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #979ff2;-fx-background-repeat: no-repeat;-fx-background-size: contain; -fx-background-image: url('icons/add-folder.png');"  />
-                <Button fx:id="deleteButton" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #979ff2;-fx-background-repeat: no-repeat;-fx-background-size: contain; -fx-background-image: url('icons/delete.png');"/>
-                <Button fx:id="moveButton" onAction="#setIsMoveEnabled" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #979ff2;-fx-background-repeat: no-repeat;-fx-background-size: contain; -fx-background-image: url('icons/move-file.png');"/>
-                <Button fx:id="moveHere" onAction="#moveFilesHere" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #979ff2;-fx-background-repeat: no-repeat;-fx-background-size: contain; -fx-background-image: url('icons/move-here.png');"/>
                 <Label fx:id="fileDirectoryLabel" text="File Directory" />
+                <Pane HBox.hgrow="ALWAYS" />
+                <Button fx:id="deleteButton" onAction="#deleteFileAndFolder" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #979ff2;-fx-background-repeat: no-repeat;-fx-background-size: contain; -fx-background-image: url('icons/delete.png');"/>
             </items>
         </ToolBar>
-        <ToolBar fx:id="bottomToolbar"  prefHeight="60.0" AnchorPane.bottomAnchor="0" style="-fx-background-color: #979ff2;" />
+        <ToolBar fx:id="bottomToolbar"  prefHeight="60.0" AnchorPane.bottomAnchor="0" style="-fx-background-color: #979ff2;">
+            <items>
+                <Button fx:id="moveFile" onAction="#setIsMoveEnabled" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #979ff2;-fx-background-repeat: no-repeat;-fx-background-size: contain; -fx-background-image: url('icons/move-file(not-active).png');"/>
+                <Label fx:id="moveStatusLabel" text="Move is disabled" />
+                <Pane HBox.hgrow="ALWAYS" />
+                <Button fx:id="moveHere" onAction="#moveFilesHere" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #979ff2;-fx-background-repeat: no-repeat;-fx-background-size: contain; -fx-background-image: url('icons/move-here(not-active).png');"/>
+            </items>
+        </ToolBar>
     </children>
 </AnchorPane>

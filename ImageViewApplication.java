@@ -9,15 +9,15 @@ import java.io.IOException;
 
 public class ImageViewApplication extends Application
 {
-   private static Stage stage;
+    private static Stage stage;
 
-   public void start(Stage st) throws Exception
-   {
-      stage = st;
-      stage.setTitle("Vimlan.G Awesome Photo Viewer");
-      stage.setScene(SceneManager.getInstance().getDirectoryDisplayScene());
-      stage.show();
-   }
+    public void start(Stage st) throws Exception
+    {
+        stage = st;
+        stage.setTitle("Vimlan.G Awesome Photo Viewer");
+        stage.setScene(SceneManager.getInstance().getDirectoryDisplayScene());
+        stage.show();
+    }
 
     public static void changeScene(boolean isDirectory) {
         if (isDirectory) {
@@ -32,6 +32,6 @@ public class ImageViewApplication extends Application
         launch(args);
     }
 
- }
+}
 
 

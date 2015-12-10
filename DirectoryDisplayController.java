@@ -1,25 +1,16 @@
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Border;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.TilePane;
-import javafx.scene.image.ImageView;
-import javafx.scene.paint.Color;
-import javafx.stage.Stage;
-
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.*;
 import java.util.*;
-import java.lang.Object;
-import java.util.logging.Logger;
 
 
 public class DirectoryDisplayController {
@@ -35,6 +26,12 @@ public class DirectoryDisplayController {
 
     @FXML
     private Button backButton;
+
+    @FXML
+    private Button moveHere;
+
+    @FXML
+    private Button moveFile;
 
     @FXML
     private ToolBar topToolbar;
@@ -53,6 +50,9 @@ public class DirectoryDisplayController {
 
     @FXML
     private Label fileDirectoryLabel;
+
+    @FXML
+    private Label moveStatusLabel;
 
     public void initialize(){
         bindValues();
@@ -79,7 +79,10 @@ public class DirectoryDisplayController {
         isMoveEnabled = !isMoveEnabled;
 
         if(isMoveEnabled){
+            moveStatusLabel.setText("Move is enabled");
 
+        }else{
+            moveStatusLabel.setText("Move is disabled");
         }
     }
 
@@ -87,16 +90,44 @@ public class DirectoryDisplayController {
         if(isMoveEnabled && selectedFileList.size()!=0){
             for(File selectedFile:selectedFileList) {
                 try {
-                    FileUtils.copyDirectory(selectedFile.getAbsolutePath(), directoryLocation+selectedFile.getName());
+                    Path FROM = Paths.get(selectedFile.getAbsolutePath());
+                    Path TO = Paths.get(directoryLocation+"/"+selectedFile.getName());
+                    CopyOption[] options = new CopyOption[]{
+                            StandardCopyOption.REPLACE_EXISTING,
+                            StandardCopyOption.COPY_ATTRIBUTES
+                    };
+                    Files.copy(FROM, TO, options);
+                    selectedFile.delete();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
         }
+        listFilesAndFilesSubDirectories(directoryLocation);
     }
 
-    public void deleteFileAndFolder(){
-        if(selectedFileList.size() != 0){}
+    public void deleteFileAndFolder() {
+
+        if(selectedFileList.size() != 0) {
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Confirmation Dialog");
+            alert.setHeaderText("");
+            if (selectedFileList.size() > 1) {
+                alert.setContentText("Are you sure want to delete these items?");
+            } else {
+                alert.setContentText("Are you sure want to delete this item?");
+            }
+
+            Optional<ButtonType> result = alert.showAndWait();
+            if (result.get() == ButtonType.OK) {
+                for (File selectedFile : selectedFileList) {
+                    selectedFile.delete();
+                }
+                listFilesAndFilesSubDirectories(directoryLocation);
+            } else {
+                // ... user chose CANCEL or closed the dialog
+            }
+        }
     }
 
     public void listFilesAndFilesSubDirectories(String location){
@@ -113,7 +144,7 @@ public class DirectoryDisplayController {
             Image img;
 
             if (file.isFile()){
-                 img = new Image("file:"+file.getAbsolutePath());
+                img = new Image("file:"+file.getAbsolutePath());
             }else{
                 img = new Image("file:/Users/VIMLANG/G52SAD-Coursework2/icons/folder.png");
             }
@@ -133,20 +164,26 @@ public class DirectoryDisplayController {
             pane.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
 
                 if(event.getClickCount() == 1){
-                    pane.setOpacity(0.5);
                     if(file.isFile()){
-                        selectedFileList.add(file);
+                        if(pane.getOpacity() == 0.5){
+                            pane.setOpacity(1);
+                            selectedFileList.remove(file);
+                        }else{
+                            pane.setOpacity(0.5);
+                            selectedFileList.add(file);
+                        }
                     }
                 }
 
                 if(event.getClickCount() == 2) {
-                    pane.setOpacity(0);
+//                    pane.setOpacity(0);
                     if(file.isDirectory()) {
                         listFilesAndFilesSubDirectories(file.getAbsolutePath());
-                        fileDirectoryLabel.setText("Current Directory: "+file.getAbsolutePath());
+                        directoryLocation = file.getAbsolutePath();
+                        fileDirectoryLabel.setText("Current Directory: "+directoryLocation);
                         pastDirectory.push(location);
                     }else{
-                        //its a file
+                        SceneManager.getInstance().getImageViewController().getFilesList(directoryLocation);
                         ImageViewApplication.changeScene(false);
                         SceneManager.getInstance().getImageViewController().setImage(new Image("file:" + file.getAbsolutePath()));
                     }
@@ -162,7 +199,8 @@ public class DirectoryDisplayController {
         if(!pastDirectory.isEmpty()) {
             String dir = pastDirectory.pop();
             listFilesAndFilesSubDirectories(dir);
-            fileDirectoryLabel.setText("Current Directory: "+dir);
+            directoryLocation = dir;
+            fileDirectoryLabel.setText("Current Directory: "+directoryLocation);
         }
     }
 
@@ -183,6 +221,7 @@ public class DirectoryDisplayController {
                 }
             }
         }
+        listFilesAndFilesSubDirectories(directoryLocation);
     }
 
 }

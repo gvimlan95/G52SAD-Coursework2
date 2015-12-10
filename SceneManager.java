@@ -21,6 +21,7 @@ public class SceneManager {
             loadDirectoryDisplayFXML();
         } catch (IOException e) {
             System.out.println("Some FXML file was probably not found.");
+            e.printStackTrace();
         }
     }
 

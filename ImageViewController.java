@@ -21,16 +21,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class ImageViewController 
+public class ImageViewController
 {
     private int xRotate=0;
     private int effectId = -1;
     private double imageWidth;
     private double imageHeight;
+    private String currentDirectory = "/Users/VIMLANG/SAD Images/";
 
     ColorAdjust effectAdjust = new ColorAdjust();
 
-    // Private fields for components 
+    // Private fields for components
     @FXML
     private ImageView myImage;
     private Image newImage;
@@ -40,7 +41,7 @@ public class ImageViewController
 
     // Private fields for the dog and cat images
     private List<Image> images = new ArrayList<>();
-//    private List<String> fileNameList = new ArrayList<>();
+    //    private List<String> fileNameList = new ArrayList<>();
     private int index = 0;
 
     @FXML
@@ -67,14 +68,13 @@ public class ImageViewController
     @FXML
     private ScrollPane scrollPane;
 
-    // Initialize method
     public void initialize(){
-        getFilesList();
-//        setImage(images.get(0));
+        getFilesList(currentDirectory);
         bindValues();
     }
 
     public void returnToGallery(){
+
         ImageViewApplication.changeScene(true);
     }
 
@@ -89,24 +89,26 @@ public class ImageViewController
         scrollPane.prefHeightProperty().bind(flowPane.prefHeightProperty().subtract(150));
     }
 
-    public void getFilesList(){
+    public void getFilesList(String dir){
         images.removeAll(images);
         ListFilesUtil listFilesUtil = new ListFilesUtil();
-        File[] fileList=listFilesUtil.listFiles("/Users/VIMLANG/SAD Images/");
+        File[] fileList=listFilesUtil.listFiles(dir);
         for (File file : fileList){
             if (file.isFile()){
                 Image newImage1 = new Image("file:"+file.getPath());
                 images.add(newImage1);
             }
         }
-        images.remove(0);
-        setImage(images.get(1));
     }
 
     public void setImage(Image image){
         myImage.setImage(image);
         imageWidth = myImage.getFitWidth();
         imageHeight = myImage.getFitHeight();
+    }
+
+    public void setCurrentDirectory(String dir){
+        currentDirectory = dir;
     }
 
     public void fileChooser(ActionEvent event) {
@@ -122,9 +124,7 @@ public class ImageViewController
         File file = fileChooser.showOpenDialog(null);
 
         if(file!=null)
-//            myImage.setRotate(0);
-            newImage = new Image("file:"+file.getPath());
-            setImage(newImage);
+        setImage(newImage);
     }
 
     public void rotateLeft(){
