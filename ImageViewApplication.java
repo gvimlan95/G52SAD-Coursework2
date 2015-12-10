@@ -14,7 +14,7 @@ public class ImageViewApplication extends Application
     public void start(Stage st) throws Exception
     {
         stage = st;
-        stage.setTitle("Vimlan.G Awesome Photo Viewer");
+        stage.setTitle("GV Photo Viewer");
         stage.setScene(SceneManager.getInstance().getDirectoryDisplayScene());
         stage.show();
     }

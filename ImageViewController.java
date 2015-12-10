@@ -19,7 +19,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 public class ImageViewController
 {
@@ -27,7 +26,7 @@ public class ImageViewController
     private int effectId = -1;
     private double imageWidth;
     private double imageHeight;
-    private String currentDirectory = "/Users/VIMLANG/SAD Images/";
+    private String currentDirectory = System.getProperty("user.home");
 
     ColorAdjust effectAdjust = new ColorAdjust();
 
@@ -39,9 +38,8 @@ public class ImageViewController
     @FXML
     private AnchorPane root;
 
-    // Private fields for the dog and cat images
     private List<Image> images = new ArrayList<>();
-    //    private List<String> fileNameList = new ArrayList<>();
+
     private int index = 0;
 
     @FXML

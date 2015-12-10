@@ -1,3 +1,4 @@
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.scene.control.*;
@@ -7,6 +8,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.TilePane;
+import javafx.stage.FileChooser;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.*;
@@ -18,7 +21,7 @@ public class DirectoryDisplayController {
     private List<Image> images = new ArrayList<>();
     private List<File> selectedFileList = new ArrayList<>();
     private Deque<String> pastDirectory = new ArrayDeque<String>();
-    private String directoryLocation = "/Users/VIMLANG/SAD Images/";
+    private String directoryLocation = System.getProperty("user.home");
     private Boolean isMoveEnabled = false;
 
     @FXML

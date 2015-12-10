@@ -3,18 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="9884ee7d-f5ec-44af-a51c-2c14dbc24414" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/DirectoryDisplayController.class" afterPath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/DirectoryDisplayController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/ImageViewController.class" afterPath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/ImageViewController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/SceneManager.class" afterPath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/SceneManager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DirectoryDisplay.fxml" afterPath="$PROJECT_DIR$/DirectoryDisplay.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DirectoryDisplayController.java" afterPath="$PROJECT_DIR$/DirectoryDisplayController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ImageView.fxml" afterPath="$PROJECT_DIR$/ImageView.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ImageViewApplication.java" afterPath="$PROJECT_DIR$/ImageViewApplication.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ImageViewController.java" afterPath="$PROJECT_DIR$/ImageViewController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SceneManager.java" afterPath="$PROJECT_DIR$/SceneManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/.idea/workspace.xml" afterPath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/DirectoryDisplay.fxml" afterPath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/DirectoryDisplay.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/ImageView.fxml" afterPath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/ImageView.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="G52SAD-Coursework2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,7 +34,7 @@
         <entry file="file://$PROJECT_DIR$/ImageViewApplication.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+              <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -49,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageViewController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ImageViewController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ImageViewController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="115" column="52" selection-start-line="115" selection-start-column="52" selection-end-line="115" selection-end-column="52" />
+            <state vertical-scroll-proportion="-0.024752475">
+              <caret line="28" column="69" selection-start-line="28" selection-start-column="69" selection-end-line="28" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -61,13 +54,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DirectoryDisplayController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DirectoryDisplayController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DirectoryDisplayController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33333334">
-              <caret line="59" column="43" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#682#690#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -87,27 +81,27 @@
       </file>
       <file leaf-file-name="ImageView.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ImageView.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.6037736">
+            <state vertical-scroll-proportion="-0.28301886">
               <caret line="29" column="107" selection-start-line="29" selection-start-column="107" selection-end-line="29" selection-end-column="107" />
               <folding />
             </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="DirectoryDisplay.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DirectoryDisplay.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.924528">
-              <caret line="31" column="69" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="69" />
-              <folding />
-            </state>
-          </provider>
           <provider editor-type-id="JavaFX-Scene-Builder">
             <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.3396225">
+              <caret line="22" column="266" selection-start-line="22" selection-start-column="266" selection-end-line="22" selection-end-column="266" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -136,9 +130,9 @@
         <option value="$PROJECT_DIR$/ImageView.java" />
         <option value="$PROJECT_DIR$/ListFilesUtil.java" />
         <option value="$PROJECT_DIR$/SceneManager.java" />
-        <option value="$PROJECT_DIR$/ImageViewApplication.java" />
         <option value="$PROJECT_DIR$/ImageView.fxml" />
         <option value="$PROJECT_DIR$/DirectoryDisplay.fxml" />
+        <option value="$PROJECT_DIR$/ImageViewApplication.java" />
         <option value="$PROJECT_DIR$/DirectoryDisplayController.java" />
         <option value="$PROJECT_DIR$/ImageViewController.java" />
       </list>
@@ -185,8 +179,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -221,7 +216,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -711,12 +705,14 @@
       <workItem from="1449545087316" duration="57180000" />
       <workItem from="1449723792257" duration="611000" />
       <workItem from="1449724614282" duration="919000" />
-      <workItem from="1449725738875" duration="2137000" />
+      <workItem from="1449725738875" duration="2666000" />
+      <workItem from="1449729374370" duration="11000" />
+      <workItem from="1449732161072" duration="199000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107111000" />
+    <option name="totallyTimeSpent" value="107850000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -767,6 +763,80 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/DirectoryDisplay.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="266" selection-start-line="22" selection-start-column="266" selection-end-line="22" selection-end-column="266" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ImageViewApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ImageViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="115" column="52" selection-start-line="115" selection-start-column="52" selection-end-line="115" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DirectoryDisplayController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#682#690#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SceneManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ImageView.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="107" selection-start-line="29" selection-start-column="107" selection-end-line="29" selection-end-column="107" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DirectoryDisplay.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="266" selection-start-line="22" selection-start-column="266" selection-end-line="22" selection-end-column="266" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ImageViewApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -793,6 +863,7 @@
           <caret line="172" column="26" selection-start-line="172" selection-start-column="26" selection-end-line="172" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#682#690#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -808,25 +879,25 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ImageView.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="37" column="61" selection-start-line="37" selection-start-column="61" selection-end-line="37" selection-end-column="61" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DirectoryDisplay.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DirectoryDisplay.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ImageViewApplication.java">
@@ -855,6 +926,7 @@
           <caret line="195" column="56" selection-start-line="195" selection-start-column="56" selection-end-line="195" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#682#690#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -917,6 +989,7 @@
           <caret line="82" column="28" selection-start-line="82" selection-start-column="28" selection-end-line="82" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#682#690#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -979,6 +1052,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#682#690#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1060,10 +1134,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15151516">
           <caret line="247" column="26" selection-start-line="247" selection-start-column="26" selection-end-line="247" selection-end-column="26" />
-          <folding>
-            <element signature="e#8321#8322#0" expanded="false" />
-            <element signature="e#8349#8350#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1119,13 +1189,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/icons/move-file(not-active).png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ImageViewApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DirectoryDisplay.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.3396225">
+          <caret line="22" column="266" selection-start-line="22" selection-start-column="266" selection-end-line="22" selection-end-column="266" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ImageView.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.28301886">
+          <caret line="29" column="107" selection-start-line="29" selection-start-column="107" selection-end-line="29" selection-end-column="107" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1139,47 +1236,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/icons/move-file(not-active).png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ImageView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/DirectoryDisplayController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.6037736">
-          <caret line="29" column="107" selection-start-line="29" selection-start-column="107" selection-end-line="29" selection-end-column="107" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DirectoryDisplay.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.924528">
-          <caret line="31" column="69" selection-start-line="31" selection-start-column="53" selection-end-line="31" selection-end-column="69" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#682#690#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ImageViewController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="115" column="52" selection-start-line="115" selection-start-column="52" selection-end-line="115" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DirectoryDisplayController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="59" column="43" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="43" />
+        <state vertical-scroll-proportion="-0.024752475">
+          <caret line="28" column="69" selection-start-line="28" selection-start-column="69" selection-end-line="28" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
