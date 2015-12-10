@@ -57,7 +57,7 @@ public class DirectoryDisplayController {
     public void initialize(){
         bindValues();
         listFilesAndFilesSubDirectories(directoryLocation);
-        fileDirectoryLabel.setText(directoryLocation);
+        fileDirectoryLabel.setText("Current Directory: "+directoryLocation);
     }
 
     public void bindValues(){
@@ -84,15 +84,15 @@ public class DirectoryDisplayController {
     }
 
     public void moveFilesHere(){
-//        if(isMoveEnabled && selectedFileList.size()!=0){
-//            for(File selectedFile:selectedFileList) {
-//                try {
-//                    FileUtils.copyDirectory(selectedFile.getAbsolutePath(), directoryLocation+selectedFile.getName());
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        }
+        if(isMoveEnabled && selectedFileList.size()!=0){
+            for(File selectedFile:selectedFileList) {
+                try {
+                    FileUtils.copyDirectory(selectedFile.getAbsolutePath(), directoryLocation+selectedFile.getName());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 
     public void deleteFileAndFolder(){
@@ -132,9 +132,6 @@ public class DirectoryDisplayController {
 
             pane.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
 
-//                Stage stage = (Stage)root.getScene().getWindow();
-//                Stage stage = ((Node) event.getSource().getScene().getWindow());
-
                 if(event.getClickCount() == 1){
                     pane.setOpacity(0.5);
                     if(file.isFile()){
@@ -146,21 +143,12 @@ public class DirectoryDisplayController {
                     pane.setOpacity(0);
                     if(file.isDirectory()) {
                         listFilesAndFilesSubDirectories(file.getAbsolutePath());
-                        fileDirectoryLabel.setText(file.getAbsolutePath());
+                        fileDirectoryLabel.setText("Current Directory: "+file.getAbsolutePath());
                         pastDirectory.push(location);
                     }else{
                         //its a file
-                        Parent imageViewParent = null;
-                        try {
-                            imageViewParent = FXMLLoader.load(getClass().getResource("ImageView.fxml"));
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                        Scene imageViewPage = new Scene(imageViewParent);
-                        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                        stage.hide();
-                        stage.setScene(imageViewPage);
-                        stage.show();
+                        ImageViewApplication.changeScene(false);
+                        SceneManager.getInstance().getImageViewController().setImage(new Image("file:" + file.getAbsolutePath()));
                     }
                 }
 
@@ -174,7 +162,7 @@ public class DirectoryDisplayController {
         if(!pastDirectory.isEmpty()) {
             String dir = pastDirectory.pop();
             listFilesAndFilesSubDirectories(dir);
-            fileDirectoryLabel.setText(dir);
+            fileDirectoryLabel.setText("Current Directory: "+dir);
         }
     }
 

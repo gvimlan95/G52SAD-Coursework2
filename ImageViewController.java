@@ -1,6 +1,7 @@
 import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.SnapshotParameters;
 import javafx.scene.control.*;
 import javafx.scene.effect.ColorAdjust;
@@ -71,6 +72,10 @@ public class ImageViewController
         getFilesList();
 //        setImage(images.get(0));
         bindValues();
+    }
+
+    public void returnToGallery(){
+        ImageViewApplication.changeScene(true);
     }
 
     public void bindValues(){

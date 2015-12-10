@@ -20,6 +20,7 @@
        </FlowPane>
        <ToolBar fx:id="topToolbar"  AnchorPane.topAnchor="0" prefHeight="60.0" style="-fx-background-color: #979ff2;">
            <items>
+               <Button mnemonicParsing="false" onAction="#returnToGallery" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #979ff2;-fx-background-repeat: no-repeat;-fx-background-size: contain; -fx-background-image: url('icons/gallery.png');" />
                <Button fx:id="openButton" mnemonicParsing="false" onAction="#fileChooser" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: transparent; -fx-background-repeat: no-repeat; -fx-background-size: contain; -fx-background-image: url('icons/folder-open.png');" />
                <Button mnemonicParsing="false" onAction="#previousImage" prefHeight="28.0" prefWidth="30.0" style="-fx-background-color: #989898;" text="&lt;">
                    <font>
