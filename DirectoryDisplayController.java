@@ -11,6 +11,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.TilePane;
 import javafx.scene.image.ImageView;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.io.File;
@@ -46,11 +47,15 @@ public class DirectoryDisplayController {
     @FXML
     private FlowPane flowPane;
 
+    @FXML
+    private Label fileDirectoryLabel;
+
     private String directoryLocation = "/Users/VIMLANG/SAD Images/";
 
     public void initialize(){
         bindValues();
         listFilesAndFilesSubDirectories(directoryLocation);
+        fileDirectoryLabel.setText(directoryLocation);
     }
 
     public void bindValues(){
@@ -86,7 +91,7 @@ public class DirectoryDisplayController {
             if (file.isFile()){
                  img = new Image("file:"+file.getAbsolutePath());
             }else{
-                img = new Image("file:/Users/VIMLANG/G52SAD-Coursework2/icons/black-white-metro-folder-icon.png");
+                img = new Image("file:/Users/VIMLANG/G52SAD-Coursework2/icons/folder.png");
             }
 
             imgView.setImage(img);
@@ -107,24 +112,24 @@ public class DirectoryDisplayController {
 //                Stage stage = ((Node) event.getSource().getScene().getWindow());
 
                 if(event.getClickCount() == 2) {
-                    listFilesAndFilesSubDirectories(file.getAbsolutePath());
-                    pastDirectory.push(location);
-                }
-                if(event.getClickCount() == 1){
-//                    Parent imageViewParent = null;
-//                    try {
-//                        imageViewParent = FXMLLoader.load(getClass().getResource("ImageView.fxml"));
-//                    } catch (IOException e) {
-//                        e.printStackTrace();
-//                    }
-//                    Scene imageViewPage = new Scene(imageViewParent);
-//                    Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//                    stage.hide();
-//                    stage.setScene(imageViewPage);
-//                    stage.show();
-
-                    SceneManager sm = SceneManager.getInstance();
-                    sm.getSomeThing();
+                    if(file.isDirectory()) {
+                        listFilesAndFilesSubDirectories(file.getAbsolutePath());
+                        fileDirectoryLabel.setText(file.getAbsolutePath());
+                        pastDirectory.push(location);
+                    }else{
+                        //its a file
+                        Parent imageViewParent = null;
+                        try {
+                            imageViewParent = FXMLLoader.load(getClass().getResource("ImageView.fxml"));
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        Scene imageViewPage = new Scene(imageViewParent);
+                        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                        stage.hide();
+                        stage.setScene(imageViewPage);
+                        stage.show();
+                    }
                 }
 
             });
@@ -137,6 +142,7 @@ public class DirectoryDisplayController {
         if(!pastDirectory.isEmpty()) {
             String dir = pastDirectory.pop();
             listFilesAndFilesSubDirectories(dir);
+            fileDirectoryLabel.setText(dir);
         }
     }
 

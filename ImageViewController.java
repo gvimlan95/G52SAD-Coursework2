@@ -66,8 +66,6 @@ public class ImageViewController
     @FXML
     private ScrollPane scrollPane;
 
-    private String fileDirectory = "/Users/VIMLANG/SAD Images/";
-
     // Initialize method
     public void initialize(){
         getFilesList();
@@ -89,7 +87,7 @@ public class ImageViewController
     public void getFilesList(){
         images.removeAll(images);
         ListFilesUtil listFilesUtil = new ListFilesUtil();
-        File[] fileList=listFilesUtil.listFiles(fileDirectory);
+        File[] fileList=listFilesUtil.listFiles("/Users/VIMLANG/SAD Images/");
         for (File file : fileList){
             if (file.isFile()){
                 Image newImage1 = new Image("file:"+file.getPath());

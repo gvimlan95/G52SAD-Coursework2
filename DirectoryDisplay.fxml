@@ -19,10 +19,11 @@
         </FlowPane>
         <ToolBar fx:id="topToolbar" prefHeight="60.0" AnchorPane.topAnchor="0" style="-fx-background-color: #979ff2;">
             <items>
-                <Button fx:id="backButton" mnemonicParsing="false" text="Back" onAction="#goToPreviousDirectory"/>
-                <Button mnemonicParsing="false" onAction="#createNewFolder" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #979ff2;-fx-background-repeat: no-repeat;-fx-background-size: contain; -fx-background-image: url('icons/add_plus_new_user_green_page_file_up_text-512.png');"  />
-                <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #979ff2;-fx-background-repeat: no-repeat;-fx-background-size: contain; -fx-background-image: url('icons/gallery-512.png');" />
-                <Button fx:id="deleteButton" mnemonicParsing="false" text="Delete"/>
+                <Button fx:id="backButton" onAction="#goToPreviousDirectory" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #979ff2;-fx-background-repeat: no-repeat;-fx-background-size: contain; -fx-background-image: url('icons/back.png');" />
+                <Button mnemonicParsing="false" onAction="#createNewFolder" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #979ff2;-fx-background-repeat: no-repeat;-fx-background-size: contain; -fx-background-image: url('icons/add-folder.png');"  />
+                <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #979ff2;-fx-background-repeat: no-repeat;-fx-background-size: contain; -fx-background-image: url('icons/gallery.png');" />
+                <Button fx:id="deleteButton" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #979ff2;-fx-background-repeat: no-repeat;-fx-background-size: contain; -fx-background-image: url('icons/delete.png');"/>
+                <Label fx:id="fileDirectoryLabel" text="File Directory" />
             </items>
         </ToolBar>
         <ToolBar fx:id="bottomToolbar"  prefHeight="60.0" AnchorPane.bottomAnchor="0" style="-fx-background-color: #979ff2;" />

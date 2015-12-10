@@ -2,14 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9884ee7d-f5ec-44af-a51c-2c14dbc24414" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/icons/Rotate_left_arrow-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/icons/add_plus_new_user_green_page_file_up_text-512.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/icons/black-white-metro-folder-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/icons/folder-open-512.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/icons/gallery-512.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/icons/magic_wand_1-512.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/icons/reset-image.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/icons/rotate_right-512.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/icons/window_fullscreen_1-512.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/icons/Rotate_left_arrow-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/icons/add_plus_new_user_green_page_file_up_text-512.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/icons/black-white-metro-folder-icon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/icons/folder-open-512.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/icons/gallery-512.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/icons/magic_wand_1-512.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/icons/reset-image.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/icons/rotate_right-512.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/icons/window_fullscreen_1-512.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/DirectoryDisplayController.class" afterPath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/DirectoryDisplayController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/ImageView.class" afterPath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/ImageView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/ImageViewController.class" afterPath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/ImageViewController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/SceneManager.class" afterPath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/SceneManager.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DirectoryDisplay.fxml" afterPath="$PROJECT_DIR$/DirectoryDisplay.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DirectoryDisplayController.java" afterPath="$PROJECT_DIR$/DirectoryDisplayController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ImageView.java" afterPath="$PROJECT_DIR$/ImageView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ImageView.fxml" afterPath="$PROJECT_DIR$/ImageView.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ImageViewController.java" afterPath="$PROJECT_DIR$/ImageViewController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SceneManager.java" afterPath="$PROJECT_DIR$/SceneManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/DirectoryDisplay.fxml" afterPath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/DirectoryDisplay.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/ImageView.fxml" afterPath="$PROJECT_DIR$/out/production/G52SAD-Coursework2/ImageView.fxml" />
     </list>
     <ignored path="G52SAD-Coursework2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,7 +69,7 @@
         <entry file="file://$PROJECT_DIR$/ImageViewController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="91" column="61" selection-start-line="91" selection-start-column="61" selection-end-line="91" selection-end-column="61" />
+              <caret line="273" column="1" selection-start-line="273" selection-start-column="1" selection-end-line="273" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -59,11 +80,11 @@
       <file leaf-file-name="DirectoryDisplayController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DirectoryDisplayController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.0227273">
-              <caret line="154" column="64" selection-start-line="154" selection-start-column="64" selection-end-line="154" selection-end-column="64" />
+            <state vertical-scroll-proportion="0.5600649">
+              <caret line="57" column="53" selection-start-line="57" selection-start-column="53" selection-end-line="57" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#728#736#0" expanded="true" />
+                <element signature="e#761#769#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -73,7 +94,7 @@
         <entry file="file://$PROJECT_DIR$/SceneManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -85,8 +106,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.45">
-              <caret line="11" column="53" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="53" />
+            <state vertical-scroll-proportion="-5.3875">
+              <caret line="52" column="215" selection-start-line="52" selection-start-column="215" selection-end-line="52" selection-end-column="215" />
               <folding />
             </state>
           </provider>
@@ -98,10 +119,10 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.792453">
-              <caret line="24" column="84" selection-start-line="24" selection-start-column="84" selection-end-line="24" selection-end-column="84" />
+            <state vertical-scroll-proportion="-7.075472">
+              <caret line="25" column="74" selection-start-line="25" selection-start-column="74" selection-end-line="25" selection-end-column="74" />
               <folding>
-                <marker date="1449684088000" expanded="true" signature="1657:1721" placeholder="{...}" />
+                <marker date="1449713146000" expanded="true" signature="2032:2096" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -130,12 +151,12 @@
         <option value="$PROJECT_DIR$/ListFilesUtil.java" />
         <option value="$PROJECT_DIR$/ImageView2.fxml" />
         <option value="$PROJECT_DIR$/CreateImageView.java" />
+        <option value="$PROJECT_DIR$/ImageViewController.java" />
+        <option value="$PROJECT_DIR$/SceneManager.java" />
         <option value="$PROJECT_DIR$/ImageView.fxml" />
         <option value="$PROJECT_DIR$/ImageView.java" />
         <option value="$PROJECT_DIR$/DirectoryDisplay.fxml" />
-        <option value="$PROJECT_DIR$/ImageViewController.java" />
         <option value="$PROJECT_DIR$/DirectoryDisplayController.java" />
-        <option value="$PROJECT_DIR$/SceneManager.java" />
       </list>
     </option>
   </component>
@@ -196,20 +217,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="G52SAD-Coursework2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="G52SAD-Coursework2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="G52SAD-Coursework2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="out" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -717,12 +724,12 @@
       <workItem from="1448969482120" duration="82000" />
       <workItem from="1449069467303" duration="16757000" />
       <workItem from="1449197573260" duration="29425000" />
-      <workItem from="1449545087316" duration="45333000" />
+      <workItem from="1449545087316" duration="49394000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91597000" />
+    <option name="totallyTimeSpent" value="95658000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -735,7 +742,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22128174" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22128174" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15972222" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -799,7 +806,7 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#728#736#0" expanded="true" />
+            <element signature="e#761#769#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -823,7 +830,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
-            <marker date="1449684088000" expanded="true" signature="1657:1721" placeholder="{...}" />
+            <marker date="1449713146000" expanded="true" signature="2032:2096" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -921,52 +928,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/icons/rotate_right-512.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/icons/Rotate_left_arrow-2.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/icons/window_fullscreen_1-512.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/icons/save.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/icons/magic_wand_1-512.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/icons/folder-open-512.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/icons/gallery-512.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/icons/add_plus_new_user_green_page_file_up_text-512.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/icons/camera.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/icons/black-white-metro-folder-icon.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -979,13 +946,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ImageView.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/ListFilesUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.45">
-          <caret line="11" column="53" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="53" />
+        <state vertical-scroll-proportion="1.0730519">
+          <caret line="61" column="31" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SceneManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -1000,52 +972,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ImageViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="273" column="1" selection-start-line="273" selection-start-column="1" selection-end-line="273" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ImageView.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.3875">
+          <caret line="52" column="215" selection-start-line="52" selection-start-column="215" selection-end-line="52" selection-end-column="215" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/DirectoryDisplay.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.792453">
-          <caret line="24" column="84" selection-start-line="24" selection-start-column="84" selection-end-line="24" selection-end-column="84" />
+        <state vertical-scroll-proportion="-7.075472">
+          <caret line="25" column="74" selection-start-line="25" selection-start-column="74" selection-end-line="25" selection-end-column="74" />
           <folding>
-            <marker date="1449684088000" expanded="true" signature="1657:1721" placeholder="{...}" />
+            <marker date="1449713146000" expanded="true" signature="2032:2096" placeholder="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ImageViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="91" column="61" selection-start-line="91" selection-start-column="61" selection-end-line="91" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SceneManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ListFilesUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0730519">
-          <caret line="61" column="31" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DirectoryDisplayController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.0227273">
-          <caret line="154" column="64" selection-start-line="154" selection-start-column="64" selection-end-line="154" selection-end-column="64" />
+        <state vertical-scroll-proportion="0.5600649">
+          <caret line="57" column="53" selection-start-line="57" selection-start-column="53" selection-end-line="57" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#728#736#0" expanded="true" />
+            <element signature="e#761#769#0" expanded="true" />
           </folding>
         </state>
       </provider>

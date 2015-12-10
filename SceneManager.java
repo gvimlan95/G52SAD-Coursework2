@@ -1,20 +1,15 @@
 public class SceneManager {
 
-    private static SceneManager myObj;
+    private static SceneManager firstInstance = null;
 
-    private SceneManager(){
+    private SceneManager(){}
 
-    }
+    public SceneManager getInstance(){
 
-    public static SceneManager getInstance(){
-        if(myObj == null){
-            myObj = new SceneManager();
+        if(firstInstance == null){
+
+            firstInstance = new SceneManager();
         }
-        return myObj;
-    }
-
-    public void getSomeThing(){
-        // do something here
-
+        return firstInstance;
     }
 }
