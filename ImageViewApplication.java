@@ -4,9 +4,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
+/* Main class to start the program */
 public class ImageViewApplication extends Application
 {
     private static Stage stage;

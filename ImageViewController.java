@@ -71,11 +71,13 @@ public class ImageViewController
         bindValues();
     }
 
+    //returns to the file browser window scene
     public void returnToGallery(){
 
         ImageViewApplication.changeScene(true);
     }
 
+    //sets the layout property of all the visual components
     public void bindValues(){
         topToolbar.prefWidthProperty().bind(root.widthProperty());
         bottomToolbar.prefWidthProperty().bind(root.widthProperty());
@@ -87,6 +89,7 @@ public class ImageViewController
         scrollPane.prefHeightProperty().bind(flowPane.prefHeightProperty().subtract(150));
     }
 
+    //append all the files in a list to the array
     public void getFilesList(String dir){
         images.removeAll(images);
         ListFilesUtil listFilesUtil = new ListFilesUtil();
@@ -175,6 +178,7 @@ public class ImageViewController
         }
     }
 
+    //gets called by the button to save the image
     public void saveHandler(){
         Image image = myImage.getImage();
         saveToFile(image);
@@ -265,6 +269,7 @@ public class ImageViewController
 
     }
 
+    //enables full screen
     public void fullscreenHandler(){
         Stage stage = (Stage)root.getScene().getWindow();
 

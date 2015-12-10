@@ -5,6 +5,8 @@ import javafx.scene.Scene;
 import java.io.IOError;
 import java.io.IOException;
 
+/*Works as a singleton class, to join all the controllers together and making all methods accessible from different controllers */
+
 public class SceneManager {
 
     private static SceneManager instance;

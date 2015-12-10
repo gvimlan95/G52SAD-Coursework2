@@ -63,6 +63,7 @@ public class DirectoryDisplayController {
         fileDirectoryLabel.setText("Current Directory: "+directoryLocation);
     }
 
+    //sets the layout property of all the visual components
     public void bindValues(){
         topToolbar.prefWidthProperty().bind(root.widthProperty());
 
@@ -80,15 +81,14 @@ public class DirectoryDisplayController {
 
     public void setIsMoveEnabled(){
         isMoveEnabled = !isMoveEnabled;
-
         if(isMoveEnabled){
             moveStatusLabel.setText("Move is enabled");
-
         }else{
             moveStatusLabel.setText("Move is disabled");
         }
     }
 
+    //copies file from source to destination and deletes the old file
     public void moveFilesHere(){
         if(isMoveEnabled && selectedFileList.size()!=0){
             for(File selectedFile:selectedFileList) {
@@ -109,7 +109,8 @@ public class DirectoryDisplayController {
         listFilesAndFilesSubDirectories(directoryLocation);
     }
 
-    public void deleteFileAndFolder() {
+    //deletes the specified files
+    public void deleteFiles() {
 
         if(selectedFileList.size() != 0) {
             Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -128,11 +129,12 @@ public class DirectoryDisplayController {
                 }
                 listFilesAndFilesSubDirectories(directoryLocation);
             } else {
-                // ... user chose CANCEL or closed the dialog
+                //close the dialog box
             }
         }
     }
 
+    //list all the files and subfolders in a directory
     public void listFilesAndFilesSubDirectories(String location){
 
 
@@ -162,8 +164,6 @@ public class DirectoryDisplayController {
             pane.getChildren().add(label);
             pane.setPadding(new Insets(20.0));
 
-
-
             pane.addEventHandler(MouseEvent.MOUSE_CLICKED, event -> {
 
                 if(event.getClickCount() == 1){
@@ -179,7 +179,6 @@ public class DirectoryDisplayController {
                 }
 
                 if(event.getClickCount() == 2) {
-//                    pane.setOpacity(0);
                     if(file.isDirectory()) {
                         listFilesAndFilesSubDirectories(file.getAbsolutePath());
                         directoryLocation = file.getAbsolutePath();
@@ -198,6 +197,7 @@ public class DirectoryDisplayController {
         }
     }
 
+    //returns all files from previous browsed directory
     public void goToPreviousDirectory(){
         if(!pastDirectory.isEmpty()) {
             String dir = pastDirectory.pop();
@@ -207,6 +207,7 @@ public class DirectoryDisplayController {
         }
     }
 
+    //creates new folder in a directory
     public void createNewFolder(){
         TextInputDialog dialog = new TextInputDialog("");
         dialog.setTitle("Create New Folder");

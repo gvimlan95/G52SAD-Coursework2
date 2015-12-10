@@ -23,7 +23,7 @@
                 <Button mnemonicParsing="false" onAction="#createNewFolder" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #979ff2;-fx-background-repeat: no-repeat;-fx-background-size: contain; -fx-background-image: url('icons/add-folder.png');"  />
                 <Label fx:id="fileDirectoryLabel" text="File Directory" />
                 <Pane HBox.hgrow="ALWAYS" />
-                <Button fx:id="deleteButton" onAction="#deleteFileAndFolder" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #979ff2;-fx-background-repeat: no-repeat;-fx-background-size: contain; -fx-background-image: url('icons/delete.png');"/>
+                <Button fx:id="deleteButton" onAction="#deleteFiles" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #979ff2;-fx-background-repeat: no-repeat;-fx-background-size: contain; -fx-background-image: url('icons/delete.png');"/>
             </items>
         </ToolBar>
         <ToolBar fx:id="bottomToolbar"  prefHeight="60.0" AnchorPane.bottomAnchor="0" style="-fx-background-color: #979ff2;">
