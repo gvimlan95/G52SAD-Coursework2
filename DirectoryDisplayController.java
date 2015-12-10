@@ -8,6 +8,7 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Border;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.TilePane;
 import javafx.scene.image.ImageView;
@@ -24,7 +25,10 @@ import java.util.logging.Logger;
 public class DirectoryDisplayController {
 
     private List<Image> images = new ArrayList<>();
+    private List<File> selectedFileList = new ArrayList<>();
     private Deque<String> pastDirectory = new ArrayDeque<String>();
+    private String directoryLocation = "/Users/VIMLANG/SAD Images/";
+    private Boolean isMoveEnabled = false;
 
     @FXML
     private AnchorPane root;
@@ -50,8 +54,6 @@ public class DirectoryDisplayController {
     @FXML
     private Label fileDirectoryLabel;
 
-    private String directoryLocation = "/Users/VIMLANG/SAD Images/";
-
     public void initialize(){
         bindValues();
         listFilesAndFilesSubDirectories(directoryLocation);
@@ -60,10 +62,8 @@ public class DirectoryDisplayController {
 
     public void bindValues(){
         topToolbar.prefWidthProperty().bind(root.widthProperty());
-//        topToolbar.prefHeightProperty().bind(root.heightProperty().multiply(0.1));
 
         bottomToolbar.prefWidthProperty().bind(root.widthProperty());
-//        bottomToolbar.prefHeightProperty().bind(root.heightProperty().multiply(0.1));
 
         flowPane.prefWidthProperty().bind(root.widthProperty());
         flowPane.prefHeightProperty().bind(root.heightProperty());
@@ -73,6 +73,30 @@ public class DirectoryDisplayController {
 
         tilePane.prefWidthProperty().bind(scrollPane.widthProperty());
         tilePane.prefHeightProperty().bind(scrollPane.heightProperty());
+    }
+
+    public void setIsMoveEnabled(){
+        isMoveEnabled = !isMoveEnabled;
+
+        if(isMoveEnabled){
+
+        }
+    }
+
+    public void moveFilesHere(){
+//        if(isMoveEnabled && selectedFileList.size()!=0){
+//            for(File selectedFile:selectedFileList) {
+//                try {
+//                    FileUtils.copyDirectory(selectedFile.getAbsolutePath(), directoryLocation+selectedFile.getName());
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        }
+    }
+
+    public void deleteFileAndFolder(){
+        if(selectedFileList.size() != 0){}
     }
 
     public void listFilesAndFilesSubDirectories(String location){
@@ -111,7 +135,15 @@ public class DirectoryDisplayController {
 //                Stage stage = (Stage)root.getScene().getWindow();
 //                Stage stage = ((Node) event.getSource().getScene().getWindow());
 
+                if(event.getClickCount() == 1){
+                    pane.setOpacity(0.5);
+                    if(file.isFile()){
+                        selectedFileList.add(file);
+                    }
+                }
+
                 if(event.getClickCount() == 2) {
+                    pane.setOpacity(0);
                     if(file.isDirectory()) {
                         listFilesAndFilesSubDirectories(file.getAbsolutePath());
                         fileDirectoryLabel.setText(file.getAbsolutePath());
@@ -152,7 +184,6 @@ public class DirectoryDisplayController {
         dialog.setHeaderText("");
         dialog.setContentText("Please enter your folder name:");
 
-// Traditional way to get the response value.
         Optional<String> result = dialog.showAndWait();
         if (result.isPresent()){
             File file = new File(directoryLocation+result.get());
@@ -164,8 +195,6 @@ public class DirectoryDisplayController {
                 }
             }
         }
-
-
     }
 
 }

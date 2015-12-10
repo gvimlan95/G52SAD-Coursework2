@@ -1,15 +1,14 @@
 public class SceneManager {
 
-    private static SceneManager firstInstance = null;
+    private SceneManager instance;
 
-    private SceneManager(){}
+    private SceneManager(){
+    }
 
     public SceneManager getInstance(){
-
-        if(firstInstance == null){
-
-            firstInstance = new SceneManager();
+        if(instance == null){
+            instance = new SceneManager();
         }
-        return firstInstance;
+        return instance;
     }
 }
